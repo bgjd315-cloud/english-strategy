@@ -110,6 +110,7 @@ label.ck input{width:18px;height:18px;margin-top:5px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:16px}
 .tile{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:grid;gap:8px;align-content:start}
 .tile h3{font-size:18px}
+section.card a{overflow-wrap:anywhere}
 .bar{height:8px;border-radius:4px;background:var(--rule-2);overflow:hidden}.bar span{display:block;height:100%;background:var(--ok)}
 .pager{display:flex;justify-content:space-between;gap:8px;margin-top:8px}
 footer{margin-top:48px;padding-top:14px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--ink-3);line-height:1.75}
@@ -322,7 +323,16 @@ def main():
 <p class="sub">題目取自會考英語閱讀 111–115 年與學測英文 107–115 年（共 688 題）。你的作答、筆記與勾選會自動存在這台裝置上。</p></header>
 <p style="margin-top:16px" id="summary"></p><div class="grid" id="grid"></div>
 <div class="row no-print" style="margin-top:20px"><a class="btn" href="report.html">看我的分析報告</a>
-<button type="button" class="btn ghost" id="reset">清除我的作答紀錄</button></div>''', JS_INDEX)
+<button type="button" class="btn ghost" id="reset">清除我的作答紀錄</button></div>
+<section class="card" style="margin-top:28px"><p class="kicker">搭配使用</p><h2>兩種網站怎麼用？</h2>
+<p>老師準備了兩種網站，用的都是會考和學測的歷屆題目，但用途不一樣。</p>
+<h3>閱讀策略網站：學方法</h3>
+<ul><li>國文：<a href="https://bgjd315-cloud.github.io/guowen-strategy/">https://bgjd315-cloud.github.io/guowen-strategy/</a></li><li>英文：<a href="https://bgjd315-cloud.github.io/english-strategy/">https://bgjd315-cloud.github.io/english-strategy/</a></li></ul>
+<p>把「回原文找證據、從上下文猜字義、找出言外之意」等讀法整理成 12 種閱讀策略：先讀手冊學方法，再做學習單練習（答案與解析按鍵才出現），最後看分析報告，了解自己的強項和需要加強的地方。</p>
+<h3>判讀網站：大量練習</h3>
+<ul><li>國文：<a href="https://bgjd315-cloud.github.io/guowen-reading/">https://bgjd315-cloud.github.io/guowen-reading/</a></li><li>英文：<a href="https://bgjd315-cloud.github.io/english-reading/">https://bgjd315-cloud.github.io/english-reading/</a></li></ul>
+<p>收錄全部歷屆題目，每一題都標出在考什麼能力、陷阱在哪裡。學會方法以後，到這裡多做題目，看看自己能不能把策略用出來。</p>
+<p><b>建議的順序：</b>先到策略網站學方法、打好基本功，再到判讀網站多練習。</p></section>''', JS_INDEX)
     page("handbook.html", "英文閱讀策略手冊", '<header class="hero"><h1>英文閱讀策略手冊</h1><p>選一種策略，讀懂它的用法，再做兩題歷屆例題。</p></header>'
          '<div class="chips" id="chips"></div><div id="main"></div>', JS_HANDBOOK)
     page("worksheets.html", "英文策略學習單", '<header class="hero"><h1>學習單</h1><p>每份學習單練一種策略：先跟著步驟做示範題，再做兩題練習，最後寫反思。</p></header>'
